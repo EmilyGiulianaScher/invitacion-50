@@ -1,0 +1,7 @@
+.rsvp {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--background-section);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+}

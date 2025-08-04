@@ -1,0 +1,159 @@
+/* Definición de variables CSS */
+:root {
+  --primary-color: #c2185b;
+  --primary-hover: #a0154c;
+  --secondary-color: #9c9851;
+  --secondary-hover: #eb7e3d;
+  --text-color: #000000;
+  --background-body: #f6e7d6;
+  --background-section: #f5ece4;
+  --header-background: #f6e7d6;
+  --accent-color: #cc3366;
+  --text-light: #f6e7d6;
+  --text-dark: #362c2a;
+  --font-primary: "Montserrat", sans-serif;
+  --font-decorative: "Caveat", cursive;
+  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset y básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--background-body);
+  color: var(--text-light);
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+/* Tipografías y genéricos */
+h1 {
+  font-family: var(--font-decorative);
+  font-size: 4rem;
+  color: var(--accent-color);
+  text-shadow: 1px 1px #fff;
+}
+
+h2 {
+  font-family: var(--font-decorative);
+  color: var(--primary-hover);
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.fecha {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: var(--secondary-color);
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 6px 0;
+  color: var(--text-color);
+}
+
+/* Botones y links */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+.agenda-link {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin-top: 10px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.agenda-link:hover {
+  color: var(--secondary-hover);
+}
+
+/* Secciones y media queries globales */
+main {
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  position: relative;
+  padding: 20px;
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.fade-in-delay {
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries globales */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .fecha {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .agenda-link {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  section {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,35 @@
+header.hero {
+  padding: 80px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  background-color: var(--header-background);
+  margin-bottom: 80px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.text-content {
+  text-align: left;
+}
+
+.imgContainer img {
+  max-width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text-content {
+    text-align: center;
+  }
+  .imgContainer img {
+    max-width: 200px;
+  }
+}
