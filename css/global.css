@@ -13,8 +13,17 @@
   --text-dark: #362c2a;
   --font-primary: "Montserrat", sans-serif;
   --font-decorative: "Caveat", cursive;
+  --font-subtext: "Lora", serif;
   --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure specific sections use the new font */
+.info-content p,
+.dress-code p,
+.rsvp p,
+.fecha {
+  font-family: var(--font-subtext);
 }
 
 /* Reset y básicos */
@@ -25,7 +34,7 @@
 }
 
 body {
-  font-family: var(--font-primary);
+  background: linear-gradient(180deg, var(--background-body) 0%, #f8e9db 100%);
   background: var(--background-body);
   color: var(--text-light);
   text-align: center;
@@ -47,9 +56,10 @@ h2 {
 }
 
 h3 {
+  font-family: var(--font-decorative);
+  color: var(--primary-hover);
   font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: var(--text-dark);
+  margin-bottom: 10px;
 }
 
 .fecha {
@@ -59,9 +69,11 @@ h3 {
 }
 
 p {
+  font-family: var(--font-subtext);
   font-size: 1.1rem;
   margin: 6px 0;
-  color: var(--text-color);
+  color: var(--text-dark); /* Changed to --text-dark for better contrast */
+  line-height: 1.6;
 }
 
 /* Botones y links */
@@ -107,11 +119,21 @@ section {
   margin-bottom: 40px;
   position: relative;
   padding: 20px;
+  margin-bottom: 60px; /* More breathing room */
+}
+section.info,
+section.dress-code,
+section.rsvp {
+  padding: 30px 25px;
 }
 
 /* Animaciones */
 .fade-in {
   animation: fadeIn 1s ease-in;
+  font-family: var(--font-subtext);
+  font-size: 1rem;
+  color: var(--text-dark);
+   line-height: 1.6;
 }
 
 .fade-in-delay {
@@ -139,6 +161,9 @@ section {
   }
   .fecha {
     font-size: 0.8rem;
+  }
+  section {
+    margin-bottom: 40px;
   }
 }
 
