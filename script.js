@@ -1,12 +1,12 @@
-const daysSpan = document.getElementById('days');
-const hoursSpan = document.getElementById('hours');
-const minutesSpan = document.getElementById('minutes');
-const secondsSpan = document.getElementById('seconds');
+const daysSpan = document.getElementById("days");
+const hoursSpan = document.getElementById("hours");
+const minutesSpan = document.getElementById("minutes");
+const secondsSpan = document.getElementById("seconds");
 const targetDate = new Date("September 26, 2025 21:30:00").getTime();
 
 function updateCountdown() {
   if (!daysSpan || !hoursSpan || !minutesSpan || !secondsSpan) {
-    console.error('Countdown elements not found');
+    console.error("Countdown elements not found");
     return;
   }
 
@@ -22,14 +22,16 @@ function updateCountdown() {
   }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  daysSpan.innerHTML = String(days).padStart(2, '0');
-  hoursSpan.innerHTML = String(hours).padStart(2, '0');
-  minutesSpan.innerHTML = String(minutes).padStart(2, '0');
-  secondsSpan.innerHTML = String(seconds).padStart(2, '0');
+  daysSpan.innerHTML = String(days).padStart(2, "0");
+  hoursSpan.innerHTML = String(hours).padStart(2, "0");
+  minutesSpan.innerHTML = String(minutes).padStart(2, "0");
+  secondsSpan.innerHTML = String(seconds).padStart(2, "0");
 
   requestAnimationFrame(updateCountdown);
 }
@@ -53,15 +55,16 @@ function setFavicon(iconUrl) {
 }
 if (rsvpBtn) {
   if (path === "/f") {
-    rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLSczbOuCg2nNLyH19PapmlWBZDSjy9f0Mkx4ohV3phInSPsekA/viewform";
-    setFavicon("/icons/f-icon.png"); 
+    rsvpBtn.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLSczbOuCg2nNLyH19PapmlWBZDSjy9f0Mkx4ohV3phInSPsekA/viewform";
+    setFavicon("/icons/f-icon.png");
   } else if (path === "/2") {
-    rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLScPJVC14IkA48gyqb1Zl9UJiSX8ahBIQ1DoELnUtzCcPArOQQ/viewform";
-    setFavicon("/icons/pareja-icon.png"); 
+    rsvpBtn.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLScPJVC14IkA48gyqb1Zl9UJiSX8ahBIQ1DoELnUtzCcPArOQQ/viewform?usp=sharing&ouid=109094028400419668993";
+    setFavicon("/icons/pareja-icon.png");
   } else {
-    rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLSfA2OHhAmo7ktULvXav1eOCbu__mteizcoiL3RSbdUDLBnVUQ/viewform";
-    setFavicon("/icons/default-icon.png"); 
+    rsvpBtn.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfA2OHhAmo7ktULvXav1eOCbu__mteizcoiL3RSbdUDLBnVUQ/viewform";
+    setFavicon("/icons/default-icon.png");
   }
 }
-
-
