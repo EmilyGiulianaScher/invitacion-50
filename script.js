@@ -60,7 +60,7 @@ if (rsvpBtn) {
     setFavicon("/icons/f-icon.png");
   } else if (path === "/2") {
     rsvpBtn.href =
-      "https://docs.google.com/forms/d/e/1FAIpQLScPJVC14IkA48gyqb1Zl9UJiSX8ahBIQ1DoELnUtzCcPArOQQ/viewform?usp=sharing&ouid=109094028400419668993";
+      "https://docs.google.com/forms/d/e/1FAIpQLScPJVC14IkA48gyqb1Zl9UJiSX8ahBIQ1DoELnUtzCcPArOQQ/viewform?usp=dialog";
     setFavicon("/icons/pareja-icon.png");
   } else {
     rsvpBtn.href =
