@@ -1,3 +1,2 @@
-from = "/*"
-  to = "/.netlify/functions/dynamic-favicon"
-  status = 200
+/f    /familiar.html   200
+/2    /parejas.html    200
