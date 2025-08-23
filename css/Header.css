@@ -2,8 +2,7 @@ header.hero {
   padding: 80px 20px;
   animation: fadeIn 1.5s ease-in-out;
   background-color: var(--header-background);
-  margin-bottom: 80px;
-  
+  margin-bottom: 40px; /* Reduced from 80px to bring countdown closer */
 }
 
 .header-content {
@@ -26,6 +25,7 @@ header.hero {
   .header-content {
     flex-direction: column;
     text-align: center;
+    gap: 15px; /* Reduced from 30px to bring floral arrangement closer to title */
   }
   .text-content {
     text-align: center;

@@ -3,9 +3,9 @@
   justify-content: center;
   align-items: flex-start;
   gap: 15px;
-  margin: 5px 0 5px 0;
+  margin: 10px 0 20px 0;
   padding: 20px;
-  background-color: var();
+
 }
 
 .countdown-group {
@@ -59,6 +59,7 @@
   #countdown {
     gap: 10px;
     padding: 10px;
+    margin: 5px 0 15px 0; /* Further reduced to tighten space */
   }
   .countdown-item {
     width: 45px;
@@ -71,5 +72,8 @@
   .countdown-label {
     font-size: 0.7rem;
     min-width: 40px;
+  }
+  .header-content {
+    gap: 10px; /* Further reduced for mobile */
   }
 }
