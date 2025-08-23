@@ -2,7 +2,8 @@ header.hero {
   padding: 80px 20px;
   animation: fadeIn 1.5s ease-in-out;
   background-color: var(--header-background);
-  margin-bottom: 40px; /* Reduced from 80px to bring countdown closer */
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .header-content {
@@ -10,15 +11,27 @@ header.hero {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .text-content {
   text-align: left;
+  flex: 1;
+  min-width: 300px;
+}
+
+.imgContainer {
+  flex-shrink: 0;
 }
 
 .imgContainer img {
+  max-width: 100%;
+  width: 100%;
   max-width: 400px;
   height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
