@@ -3,4 +3,8 @@
   background-color: var(--background-section);
   text-align: center;
   box-shadow: var(--shadow-light);
+  p{
+    margin-top: 10px;
+
+  }
 }
