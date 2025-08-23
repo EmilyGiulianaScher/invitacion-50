@@ -54,13 +54,13 @@ function setFavicon(iconUrl) {
 if (rsvpBtn) {
   if (path === "/f") {
     rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLSczbOuCg2nNLyH19PapmlWBZDSjy9f0Mkx4ohV3phInSPsekA/viewform";
-    setFavicon("/icons/f-icon.jpg"); 
+    setFavicon("/icons/f-icon.png"); 
   } else if (path === "/2") {
     rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLScPJVC14IkA48gyqb1Zl9UJiSX8ahBIQ1DoELnUtzCcPArOQQ/viewform";
-    setFavicon("/icons/pareja-icon.jpg"); 
+    setFavicon("/icons/pareja-icon.png"); 
   } else {
     rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLSfA2OHhAmo7ktULvXav1eOCbu__mteizcoiL3RSbdUDLBnVUQ/viewform";
-    setFavicon("/icons/default-icon.jpg"); 
+    setFavicon("/icons/default-icon.png"); 
   }
 }
 
