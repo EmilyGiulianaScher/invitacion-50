@@ -42,11 +42,25 @@ if (daysSpan && hoursSpan && minutesSpan && secondsSpan) {
 const path = window.location.pathname;
 const rsvpBtn = document.getElementById("rsvpBtn");
 
+function setFavicon(iconUrl) {
+  let link = document.querySelector("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "icon";
+    document.head.appendChild(link);
+  }
+  link.href = iconUrl;
+}
 if (rsvpBtn) {
   if (path === "/f") {
     rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLSczbOuCg2nNLyH19PapmlWBZDSjy9f0Mkx4ohV3phInSPsekA/viewform";
+    setFavicon("/icons/f-icon.png"); 
+  } else if (path === "/2") {
+    rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLScPJVC14IkA48gyqb1Zl9UJiSX8ahBIQ1DoELnUtzCcPArOQQ/viewform";
+    setFavicon("/icons/pareja-icon.png"); 
   } else {
     rsvpBtn.href = "https://docs.google.com/forms/d/e/1FAIpQLSfA2OHhAmo7ktULvXav1eOCbu__mteizcoiL3RSbdUDLBnVUQ/viewform";
+    setFavicon("/icons/default-icon.png"); 
   }
 }
 
